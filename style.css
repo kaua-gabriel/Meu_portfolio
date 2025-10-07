@@ -12,7 +12,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 /* Estilos gerais */
@@ -171,152 +170,6 @@ p {
   }
 }
 
-
-/* BOTÃO NEON */
-.neon-trigger {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-
-  position: absolute;
-  top: 45px;
-  right: 45px;
-  width: 50px;
-  height: 50px;
-  padding: 8px;
-  border: none;
-  border-radius: 50%;
-  background: rgba(0, 255, 255, 0.07);
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 0 4px #0ff);
-  box-shadow:
-    0 0 4px rgba(0, 255, 255, 0.3),
-    0 4px 10px rgba(0, 255, 255, 0.15);
-  animation: neonPulse 3s infinite ease-in-out;
-  will-change: transform, filter, box-shadow;
-}
-
-.neon-trigger:focus {
-  outline: none;
-  box-shadow:
-    0 0 8px rgba(0, 255, 255, 0.5),
-    0 0 16px rgba(0, 255, 255, 0.4),
-    0 0 24px rgba(0, 255, 255, 0.3),
-    0 0 32px rgba(0, 255, 255, 0.2);
-  filter: drop-shadow(0 0 10px #0ff);
-  animation: none;
-}
-
-.neon-trigger:hover {
-  background: rgba(0, 255, 255, 0.18);
-  transform: scale(1.10);
-  filter: drop-shadow(0 0 12px #0ff) brightness(1.1);
-  box-shadow:
-    0 0 12px rgba(0, 255, 255, 0.5),
-    0 6px 14px rgba(0, 255, 255, 0.3);
-  animation: none;
-}
-
-.neon-trigger:active {
-  transform: scale(0.9);
-  box-shadow: inset 0 3px 8px rgba(0, 255, 255, 0.4);
-  filter: brightness(0.85);
-  animation: none;
-}
-
-.neon-trigger img {
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  user-select: none;
-}
-
-/* ESTADO ATIVO DO BOTÃO */
-.neon-trigger.neon-ativo {
-  background: rgba(0, 255, 255, 0.15);
-  transform: scale(1.08);
-  filter: drop-shadow(0 0 10px #0ff) brightness(1.1);
-  box-shadow:
-    0 0 12px rgba(0, 255, 255, 0.5),
-    0 6px 16px rgba(0, 255, 255, 0.3);
-  animation: none;
-}
-
-/* ESTADO INATIVO (PULSAR) */
-.neon-trigger:not(.neon-ativo) {
-  opacity: 0.6;
-  filter: drop-shadow(0 0 2px #0ff) brightness(0.7);
-  animation: neonPulse 3s infinite ease-in-out;
-}
-
-/* EFEITO DE PULSO NEON (DESLIGADO) */
-@keyframes neonPulse {
-  0%, 100% {
-    filter: drop-shadow(0 0 4px #0ff);
-    box-shadow:
-      0 0 4px rgba(0, 255, 255, 0.3),
-      0 4px 10px rgba(0, 255, 255, 0.15);
-  }
-  50% {
-    filter: drop-shadow(0 0 10px #0ff);
-    box-shadow:
-      0 0 8px rgba(0, 255, 255, 0.5),
-      0 6px 14px rgba(0, 255, 255, 0.3);
-  }
-}
-
-/* ESTADO ATIVO DAS SEÇÕES */
-.neon-ativa,
-section.neon-ativa {
-  box-shadow:
-    0 0 8px rgba(0, 255, 255, 0.3),
-    0 0 16px rgba(0, 255, 255, 0.2),
-    0 0 24px rgba(0, 255, 255, 0.15);
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  animation: none;
-}
-
-/* ESTADO DESLIGADO GERAL */
-body.neon-off .neon-trigger,
-body.neon-off section.neon-ativa {
-  filter: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  border: none !important;
-  animation: none !important;
-  opacity: 0.5;
-}
-
-/* ANIMAÇÃO DE FALHA / PISCAR DUAS VEZES */
-@keyframes neonFlicker {
-  0%, 100% {
-    opacity: 1;
-    box-shadow:
-      0 0 10px rgba(0, 255, 255, 0.6),
-      0 0 20px rgba(0, 255, 255, 0.45),
-      0 0 30px rgba(0, 255, 255, 0.35),
-      0 0 40px rgba(0, 255, 255, 0.25),
-      inset 0 0 10px rgba(0, 255, 255, 0.15);
-  }
-  20%, 60% {
-    opacity: 0;
-    box-shadow: none;
-  }
-  40%, 80% {
-    opacity: 1;
-    box-shadow:
-      0 0 5px rgba(0, 255, 255, 0.3),
-      0 0 10px rgba(0, 255, 255, 0.2);
-  }
-}
-
-.neon-flicker {
-  animation: neonFlicker 0.7s ease-in-out 2 forwards;
-}
-
 /* ANIMAÇÃO DE FLICKER VISUAL NAS SEÇÕES */
 @keyframes sectionFlicker {
   0%, 100% {
@@ -337,9 +190,6 @@ body.neon-off section.neon-ativa {
   }
 }
 
-section.neon-flicker {
-  animation: sectionFlicker 0.6s ease-in-out 2 forwards;
-}
 
 
 /* Classe .perfil (inclui .perfil span, .perfil .info, .perfil .imgPerf, .perfil .share) */
@@ -568,11 +418,16 @@ section.neon-flicker {
   margin-top: 1.5rem;
 }
 
+.galeria-mini img {
+  width: 300px;
+  height: 200px;
+  padding: 5px;
+}
 
 /* Classe .imagem */
 .imagem {
-  width: 100%;
-  max-width: 400px;
+  width: 5px;
+  max-width: 5px;
   margin: 1em;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -584,6 +439,84 @@ section.neon-flicker {
 .imagem:hover {
   transform: scale(1.1) rotateX(10deg) rotateY(10deg);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+#voltar {
+  --border-color: linear-gradient(-45deg, #0a0a0a, #75E4FF, #1a3c54);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #040608; 
+  --color: #ffffff; 
+
+  color: var(--color);
+  cursor: pointer;
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+    0% var(--curve-size),
+    var(--curve-size) 0,
+    100% 0,
+    100% calc(100% - var(--curve-size)),
+    calc(100% - var(--curve-size)) 100%,
+    0 100%
+  );
+  transition: color 250ms;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+#voltar::before,
+#voltar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+#voltar::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+#voltar::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
+    var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+}
+
+#voltar:hover::after,
+#voltar:focus::after {
+  clip-path: polygon(
+    calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
+    calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width))
+  );
+  transition: 500ms;
+}
+
+#voltar:hover,
+#voltar:focus {
+  color: #fff;
 }
 
 
@@ -735,6 +668,14 @@ section.neon-flicker {
   }
 }
 
+.jogos-menu {
+ display: ;
+}
+
+.jogo-icone img {
+  width: 250px;
+  height: 150px;
+}
 
 @media (min-width: 1025px) {
   section {
@@ -821,15 +762,6 @@ section.neon-flicker {
     padding: 0.8rem;
   }
 
-  .neon-trigger {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    z-index: 1000;
-    cursor: pointer;
-  }
 
   .perfil {
     width: 85%;
@@ -908,10 +840,5 @@ section.neon-flicker {
     height: 40px;
   }
 
-  .neon-trigger {
-    top: 60px;
-    right: 40px;
-    width: 45px;
-    height: 45px;
-  }
+
 }
