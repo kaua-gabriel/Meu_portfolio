@@ -457,7 +457,7 @@ p {
   place-content: center;
   padding: 0.5em 1.5em;
   font-size: 17px;
-  border: 0;
+  border: 5px;
   text-transform: uppercase;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
   clip-path: polygon(
@@ -470,7 +470,8 @@ p {
   );
   transition: color 250ms;
   text-decoration: none;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  top: 10px
 }
 
 #voltar::before,
@@ -669,18 +670,30 @@ p {
 }
 
 .jogos-menu {
- display: ;
+ display: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 10px; 
 }
 
 .jogo-icone img {
-  width: 250px;
-  height: 150px;
+   width: 100%;
+  height: auto;
+  display: block;
 }
+
+.galeria-img section {
+  display: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 10px; 
+}
+
+
 
 @media (min-width: 1025px) {
   section {
     margin: 40px 80px;
-    padding: 2rem;
   }
 
   .perfil {
@@ -758,8 +771,7 @@ p {
 
 @media (max-width: 768px) {
   section {
-    margin: 15px;
-    padding: 0.8rem;
+    margin: 10px;
   }
 
 
@@ -802,7 +814,6 @@ p {
 @media (max-width: 480px) {
   section {
     margin: 10px;
-    padding: 0.5rem;
   }
 
   .perfil {
