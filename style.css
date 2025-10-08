@@ -422,6 +422,7 @@ p {
   width: 300px;
   height: 200px;
   padding: 5px;
+  
 }
 
 /* Classe .imagem */
@@ -544,7 +545,7 @@ p {
 
 
 /* Classe .artes-section (.Arte, Art-Img) */  
-  .Arte {
+.Arte {
     display: flex;
     gap: 10px;
     left: auto;
@@ -669,6 +670,89 @@ p {
   }
 }
 
+
+/* === ESTILO BASE DOS JOGOS === */
+.jogos-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.jogo-icone img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jogo-icone img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+/* === ESCONDE OS DETALHES POR PADRÃO === */
+.jogo-detalhe {
+  display: none; /* <- o mais importante! */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.0);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Quando ativo via JS */
+.jogo-detalhe.ativo {
+  display: block;
+}
+
+.jogo-detalhe h2 {
+  margin-bottom: 10px;
+}
+
+.jogo-detalhe p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.jogo-detalhe button,
+.jogo-detalhe .btn {
+  margin: 10px;
+}
+
+/* Galeria das imagens dentro do jogo */
+.galeria-mini {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+  
+  
+}
+
+.galeria-mini img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.galeria-mini img:hover {
+  transform: scale(1.05);
+}
+
+/* Suaviza o aparecimento */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
 .jogos-menu {
  display: 10px;
   display: grid;
@@ -677,17 +761,38 @@ p {
 }
 
 .jogo-icone img {
-   width: 100%;
+  width: 100%;
   height: auto;
   display: block;
+  border-radius: 10px;
 }
 
-.galeria-img section {
-  display: 10px;
+#detalhe-galeria {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-gap: 10px; 
+  grid-template-columns: repeat(2, 1fr); /* 2 por linha */
+  gap: 12px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
 }
+
+#detalhe-galeria img {
+  width: 100%;
+  max-width: 290px; 
+  height: 100%;
+  max-height: 100px;
+  aspect-ratio: 1 / 1; 
+  object-fit: cover; 
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#detalhe-galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #fff5;
+}
+
 
 
 
@@ -698,11 +803,11 @@ p {
 
   .perfil {
     width: 30%;
-    max-width: 400px;       /* evita ficar gigante em telas muito largas */
+    max-width: 400px;       
     margin: 0 auto;
     padding: 20px;
-    height: auto;            /* altura ajusta ao conteúdo */
-    min-height: 250px;       /* mantém proporção mínima */
+    height: auto;            
+    min-height: 250px;    
     background-color: rgba(33, 33, 33, 0.7);
     clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
     border-top-right-radius: 10px;
@@ -718,8 +823,8 @@ p {
     width: 200px;
     height: 200px;
     padding: 30px;
-    object-fit: cover;       /* garante que a imagem não distorça */
-    border-radius: 50%;      /* opcional, se quiser imagem circular */
+    object-fit: cover;       
+    border-radius: 50%;     
   }
 
   h2 {

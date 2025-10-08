@@ -62,7 +62,7 @@ const jogos = {
     imagens: ["img/TB1.jpg", "img/TB2.jpg", "img/TB3.jpg", "img/TB4.jpg"]
   },
   4: {
-    titulo: "GameMuseum - Studio Amphibia",
+    titulo: "3DARChars - Studio Amphibia",
     desc: `
       Projeto de realidade aumentada (AR) em que o usuário pode visualizar personagens interagindo
       com o mundo real ao apontar o celular para um QR Code.
