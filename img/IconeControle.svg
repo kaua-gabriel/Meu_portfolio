@@ -1,0 +1,14 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Corpo do controle com laterais mais curtas -->
+  <rect x="120" y="60" width="160" height="80" rx="20" ry="20" fill="#2C3E50"/>
+
+  <!-- Botões principais (movidos 16px para a esquerda e 10px para baixo) -->
+  <circle cx="234" cy="90" r="8" fill="white"/>
+  <circle cx="254" cy="90" r="8" fill="white"/>
+  <circle cx="234" cy="110" r="8" fill="white"/>
+  <circle cx="254" cy="110" r="8" fill="white"/>
+
+  <!-- D-pad (movido 16px para a esquerda e 10px para baixo) -->
+  <rect x="148" y="82" width="12" height="40" fill="white" rx="3"/>
+  <rect x="132" y="98" width="40" height="12" fill="white" rx="3"/>
+</svg>
