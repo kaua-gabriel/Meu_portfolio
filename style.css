@@ -109,9 +109,10 @@ p {
 .containerThree:hover {
   background-image: linear-gradient(
     45deg,
-    #33E07D 0%,
-    #25D366 50%,
-    #128C7E 100%
+   #24292e 0%,  
+  #2f363d 50%,  
+  #3b434b 100% 
+
   );
   transition: background-image .3s ease;
 }
@@ -777,6 +778,7 @@ p {
   margin-top: 20px;
 }
 
+<<<<<<< HEAD
 #detalhe-galeria img {
   width: 100%;
   max-width: 290px; 
@@ -795,7 +797,11 @@ p {
 }
 
 
+=======
+.jogo-icone{
+>>>>>>> 5ef2dda (whats adicionado)
 
+}
 
 @media (min-width: 1025px) {
   section {
