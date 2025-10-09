@@ -442,6 +442,8 @@ p {
 }
 
 #voltar {
+  width: 50vw;
+  height: 50px;
   --border-color: linear-gradient(-45deg, #0a0a0a, #75E4FF, #1a3c54);
   --border-width: 0.125em;
   --curve-size: 0.5em;
@@ -958,3 +960,4 @@ p {
   }
 
 }
+
