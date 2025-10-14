@@ -58,7 +58,7 @@ const jogos = {
       O projeto envolveu competição entre duas equipes — Time Azul e Time Vermelho — exigindo estratégia,
       originalidade e documentação das mecânicas em um sistema tipo <b>“INPI interno”</b>.
     `,
-    link: "https://github.com/kaua-gabriel/Take-It-Back.git",
+    link: "https://drive.google.com/file/d/1EXx6mefRUs34waTJQy5pAQXKG-J8Zg8w/view?usp=sharing",
     imagens: ["img/TB1.jpg", "img/TB2.jpg", "img/TB3.jpg", "img/TB4.jpg"]
   },
   4: {
@@ -173,4 +173,5 @@ modalArte.addEventListener('click', e => {
 // Aplica o modal a todas as imagens da seção de Arte
 document.querySelectorAll('.cartas img').forEach(img => {
   img.addEventListener('click', () => abrirModalArte(img.src, img.alt));
+
 });
