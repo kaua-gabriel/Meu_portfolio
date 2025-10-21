@@ -34,6 +34,7 @@ const jogos = {
         <li>Fase 3:Superação — Aceitação</li>
         <li>Fase 4:Propósito — Esperança</li>
       </ul>
+      Modo Mobile Experimental!!
     `,
     link: "https://playdeads.itch.io/ascendente",
     imagens: ["img/As1.jpg", "img/As2.png", "img/As3.jpeg", "img/As4.png"]
@@ -175,5 +176,6 @@ document.querySelectorAll('.cartas img').forEach(img => {
   img.addEventListener('click', () => abrirModalArte(img.src, img.alt));
 
 });
+
 
 
