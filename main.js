@@ -35,7 +35,7 @@ const jogos = {
         <li>Fase 4:Propósito — Esperança</li>
       </ul>
     `,
-    link: "https://github.com/kaua-gabriel/Ascendente.git",
+    link: "https://playdeads.itch.io/ascendente",
     imagens: ["img/As1.jpg", "img/As2.png", "img/As3.jpeg", "img/As4.png"]
   },
   2: {
@@ -175,4 +175,5 @@ document.querySelectorAll('.cartas img').forEach(img => {
   img.addEventListener('click', () => abrirModalArte(img.src, img.alt));
 
 });
+
 
