@@ -57,7 +57,7 @@ p {
   text-align: center;
   font-size: 1.4rem;
   margin: px 0;
-  color: #D7D7D7;
+  color: #CB2626;
 }
 
 /*contato*/
@@ -193,21 +193,35 @@ p {
 
 /* Classe .perfil (inclui .perfil span, .perfil .info, .perfil .imgPerf, .perfil .share) */
 .perfil {
-  width: 90%;           
-  max-width: 400px;       
-  margin: 20px auto;      
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
   padding: 20px;
-  height: auto;           
-  min-height: 250px;    
-  background-color: rgba(33, 33, 33, 0.7);
-  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  min-height: 250px;
+
+  /* Glassmorphism alinhado com section */
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 2px rgba(195, 192, 192, 0.1);
+
+  /* Forma original preservada */
+  clip-path: polygon(
+    30px 0%, 
+    100% 0, 
+    100% calc(100% - 30px), 
+    calc(100% - 30px) 100%, 
+    0 100%, 
+    0% 30px
+  );
+
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  transition: all 0.3s ease;
+
+  transition: all 0.4s ease-in-out;
 }
 
 .perfil .imgPerf {
@@ -645,7 +659,7 @@ p {
 .footer {
   background: rgba(0, 255, 255, 0.05);
   border-top: 1px solid rgba(0, 255, 255, 0.15);
-  color: #00ffff;
+  color: #fff;
   text-align: center;
   padding: 20px 0;
   font-size: 1rem;
@@ -656,9 +670,10 @@ p {
   animation: glowFooter 3s ease-in-out infinite alternate;
 }
 
-.footer p {
+ p {
   margin: 0;
   letter-spacing: 1px;
+  color: #fff;
 }
 
 /* Animação leve de brilho */
@@ -962,5 +977,4 @@ p {
     width: 40px;
     height: 40px;
   }
-
 }
