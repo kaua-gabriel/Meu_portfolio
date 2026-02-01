@@ -38,7 +38,7 @@ const jogos = {
       Desenvolvido individualmente, o jogo mistura narrativa simbólica, pixel art feita à mão e trilha personalizada.  
       Foi uma experiência de criação intensa — onde cada mecânica e cada quadro animado carregam um pouco do processo de autossuperação que inspirou o projeto.
     `,
-    link: "https://github.com/kaua-gabriel/Ascendente.git",
+    link: "https://playdeads.itch.io/ascendente",
     imagens: ["img/As1.jpg", "img/As2.png", "img/As3.jpeg", "img/As4.png"]
   },
 
@@ -181,3 +181,4 @@ modalArte.addEventListener('click', e => {
 document.querySelectorAll('.cartas img').forEach(img => {
   img.addEventListener('click', () => abrirModalArte(img.src, img.alt));
 });
+
