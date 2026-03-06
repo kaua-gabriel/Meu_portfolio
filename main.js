@@ -181,4 +181,3 @@ modalArte.addEventListener('click', e => {
 document.querySelectorAll('.cartas img').forEach(img => {
   img.addEventListener('click', () => abrirModalArte(img.src, img.alt));
 });
-
